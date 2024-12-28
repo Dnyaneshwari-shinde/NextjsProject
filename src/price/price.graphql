@@ -1,0 +1,19 @@
+type Price {
+  id: Int
+  tokenName: String
+  price: Float
+  timestamp: String
+}
+
+input CreatePriceInput {
+  tokenName: String
+  price: Float
+}
+
+type Query {
+  getPrice: Float
+}
+
+type Mutation {
+  createPrice(createPriceInput: CreatePriceInput): Price
+}

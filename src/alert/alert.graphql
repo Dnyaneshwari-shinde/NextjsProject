@@ -1,0 +1,31 @@
+type Alert {
+  id: Int!
+  userEmail: String!
+  tokenName: String!
+  priceThreshold: Float!
+  condition: String!
+  status: String!
+  createdAt: String!
+}
+
+input CreateAlertInput {
+  userEmail: String!
+  tokenName: String!
+  priceThreshold: Float!
+  condition: String!
+}
+
+input UpdateAlertStatusInput {
+  id: Int!
+  status: String!
+}
+
+type Query {
+  getAlerts: [Alert!]!
+  activeAlerts: [Alert!]! 
+}
+
+type Mutation {
+  createAlert(createAlertInput: CreateAlertInput!): Alert!
+  updateAlertStatus(updateAlertStatusInput: UpdateAlertStatusInput!): Boolean!
+}
