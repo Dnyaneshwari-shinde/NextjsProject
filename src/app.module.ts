@@ -11,6 +11,7 @@ import { PriceModule } from './price/price.module';
 // import { AlertModule } from './alert/alert.module';
 import { AlertModule } from './alert/alert.module';
 import { MailModule } from './mail/mail.module';
+import { SwapModule } from './swap/swap.module';
 
 
 @Module({
@@ -35,6 +36,7 @@ import { MailModule } from './mail/mail.module';
     PriceModule,
     AlertModule,
     MailModule,
+    SwapModule,
   ],
   controllers: [AppController],
   providers: [AppService],

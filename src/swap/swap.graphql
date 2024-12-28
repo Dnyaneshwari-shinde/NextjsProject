@@ -1,0 +1,24 @@
+type Swap {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input CreateSwapInput {
+  # Example field (placeholder)
+  exampleField: Int
+}
+
+input UpdateSwapInput {
+  id: Int!
+}
+
+type Query {
+  swap: [Swap]!
+  swap(id: Int!): Swap
+}
+
+type Mutation {
+  createSwap(createSwapInput: CreateSwapInput!): Swap!
+  updateSwap(updateSwapInput: UpdateSwapInput!): Swap!
+  removeSwap(id: Int!): Swap
+}
