@@ -111,7 +111,7 @@ export class PriceService {
 
     const hourlyPrices = await this.priceRepository
       .createQueryBuilder('price')
-      .select("DATE_TRUNC('hour', price.timestamp) AS hour, AVG(price.price) AS avg_price") // Adjust for MySQL if needed
+      .select("DATE_TRUNC('hour', price.timestamp) AS hour, AVG(price.price) AS avg_price")
       .where('price.timestamp >= :oneDayAgo', { oneDayAgo })
       .groupBy('hour').orderBy('hour', 'DESC').getRawMany();
 
